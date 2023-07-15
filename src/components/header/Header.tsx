@@ -3,11 +3,10 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const Block = styled.header`
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: #6172e6;
+  background-color: #7b5eff;
 `;
 
 const Menu = styled.menu`
@@ -40,8 +39,8 @@ const LinkElem = styled(NavLink)`
 const arrMenu: Array<{ element: string; to: string }> = [
   { element: "главная", to: "/" },
   { element: "образование", to: "/education" },
+  { element: "стек", to: "/steck" },
   { element: "примеры", to: "/my-works" },
-  { element: "котакты", to: "/contacts" },
 ];
 
 const Header = () => {
