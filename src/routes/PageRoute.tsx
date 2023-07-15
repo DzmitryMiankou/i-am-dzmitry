@@ -11,7 +11,7 @@ const PageRoute = () => {
   const arrToElem: Array<{ element: any; path: string }> = [
     { element: <MainPage />, path: "/" },
     { element: <H1>Образование</H1>, path: "/education" },
-    { element: <H1>стек</H1>, path: "/steck" },
+    { element: <H1>стек</H1>, path: "/stack" },
     { element: <H1>Примеры</H1>, path: "/my-works" },
   ];
 

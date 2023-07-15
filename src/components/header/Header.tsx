@@ -37,9 +37,9 @@ const LinkElem = styled(NavLink)`
 `;
 
 const arrMenu: Array<{ element: string; to: string }> = [
-  { element: "главная", to: "/" },
+  { element: "обо мне", to: "/" },
   { element: "образование", to: "/education" },
-  { element: "стек", to: "/steck" },
+  { element: "стек", to: "/stack" },
   { element: "примеры", to: "/my-works" },
 ];
 

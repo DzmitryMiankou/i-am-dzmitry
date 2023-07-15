@@ -1,8 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import MainPhoto from "../../img/mainPhoto.jpg";
 
 const Main = styled.main`
-  width: 98%;
+  width: 80%;
+  display: flex;
+  gap: 40px;
+  @media (max-width: 1675px) {
+    width: 85%;
+  }
+  @media (max-width: 1570px) {
+    width: 90%;
+  }
+  @media (max-width: 1570px) {
+    width: 92%;
+  }
 `;
 
 const NameContainer = styled.main`
@@ -15,10 +27,22 @@ const H1 = styled.h1`
   line-height: 10rem;
 `;
 const H2 = styled.h2`
-  color: #a89817;
+  color: #a89717c3;
   font-size: 3rem;
   line-height: 10rem;
   text-align: right;
+`;
+
+const BorderPhoto = styled.div`
+  margin-top: 50px;
+  display: flex;
+  align-items: start;
+  margin-left: auto;
+`;
+
+const Photo = styled.img`
+  width: 500px;
+  border: 20px solid #7b5eff;
 `;
 
 const MainPage = () => {
@@ -28,6 +52,9 @@ const MainPage = () => {
         <H1>Front-end developer</H1>
         <H2>Дмитрий Меньков</H2>
       </NameContainer>
+      <BorderPhoto>
+        <Photo src={MainPhoto} alt="my-photo" />
+      </BorderPhoto>
     </Main>
   );
 };
