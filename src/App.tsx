@@ -5,7 +5,7 @@ import PageRoute from "./routes/PageRoute";
 import Footer from "./components/footer/Footer";
 
 const AppStyle = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: hidden;
   display: grid;
   grid-template-rows: 70px auto 70px;

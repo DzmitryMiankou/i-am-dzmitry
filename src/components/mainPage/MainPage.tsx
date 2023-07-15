@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MainPhoto from "../../img/mainPhoto.jpg";
+import SvgIllustration from "./svgIllustration/SvgIllustration";
 
 const Main = styled.main`
   width: 80%;
@@ -43,7 +44,8 @@ const BorderPhoto = styled.div`
 const Photo = styled.img`
   width: 500px;
   border: 20px solid #7b5eff;
-  border-bottom: 40px solid #7b5eff;
+  border-bottom: 70px solid #7b5eff;
+  box-shadow: 20px 0px 0px 0px #a89817;
 `;
 
 const MainPage = () => {
@@ -52,6 +54,7 @@ const MainPage = () => {
       <NameContainer>
         <H1>Front-end developer</H1>
         <H2>Дмитрий Меньков</H2>
+        <SvgIllustration />
       </NameContainer>
       <BorderPhoto>
         <Photo src={MainPhoto} alt="my-photo" />

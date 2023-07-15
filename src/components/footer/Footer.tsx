@@ -28,6 +28,7 @@ const Email = styled.a`
   color: #d3d6e5;
   font-size: 1.5rem;
   display: flex;
+  transition: 0.2s;
   &:hover {
     color: var(--colour-white);
   }
