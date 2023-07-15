@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "../components/mainPage/MainPage";
+import EducationPage from "../components/educationPage/EducationPage";
 
 const H1 = styled.h1`
   color: #aa0000;
@@ -10,7 +11,7 @@ const H1 = styled.h1`
 const PageRoute = () => {
   const arrToElem: Array<{ element: any; path: string }> = [
     { element: <MainPage />, path: "/" },
-    { element: <H1>Образование</H1>, path: "/education" },
+    { element: <EducationPage />, path: "/education" },
     { element: <H1>стек</H1>, path: "/stack" },
     { element: <H1>Примеры</H1>, path: "/my-works" },
   ];

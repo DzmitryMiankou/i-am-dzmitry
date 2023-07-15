@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./components/header/Header";
 import PageRoute from "./routes/PageRoute";
+import Footer from "./components/footer/Footer";
 
 const AppStyle = styled.div`
   height: 100vh;
@@ -15,13 +16,6 @@ const Page = styled.div`
   justify-content: center;
 `;
 
-const Footer = styled.footer`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: #7b5eff;
-`;
-
 const App = () => {
   return (
     <AppStyle>
@@ -29,7 +23,7 @@ const App = () => {
       <Page>
         <PageRoute />
       </Page>
-      <Footer></Footer>
+      <Footer />
     </AppStyle>
   );
 };

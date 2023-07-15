@@ -42,6 +42,7 @@ const BorderPhoto = styled.div`
 
 const Photo = styled.img`
   width: 500px;
+  border-radius: 50px 0;
   border: 20px solid #7b5eff;
 `;
 
