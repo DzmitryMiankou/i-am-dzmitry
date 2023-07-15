@@ -27,8 +27,12 @@ const LinkElem = styled(NavLink)`
   font-size: 20px;
   text-transform: uppercase;
   color: #d3d6e5;
+  transition: 0.2s;
+  &:hover {
+    color: var(--colour-white);
+  }
   &.active {
-    color: #ffffff;
+    color: var(--colour-white);
     cursor: default;
   }
 `;

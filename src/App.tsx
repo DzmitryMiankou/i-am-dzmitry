@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import styled from "styled-components";
 import Header from "./components/header/Header";
 import PageRoute from "./routes/PageRoute";
