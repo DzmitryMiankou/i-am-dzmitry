@@ -9,7 +9,7 @@ const H1 = styled.h1`
 `;
 
 const PageRoute = () => {
-  const arrToElem: Array<{ element: any; path: string }> = [
+  const arrToElem: Array<{ element: JSX.Element; path: string }> = [
     { element: <MainPage />, path: "/" },
     { element: <EducationPage />, path: "/education" },
     { element: <H1>стек</H1>, path: "/stack" },

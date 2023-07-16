@@ -4,6 +4,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import PhotoSchool from "../../img/foto_zhilichi.jpg";
 import PhotoMGU from "../../img/07.jpg";
 import PhotoBGU from "../../img/bizn.jpg";
+import Illustration from "../../img/iil2.svg";
 
 const Main = styled.main`
   width: 80%;
@@ -66,6 +67,11 @@ const P2 = styled.p`
   font-weight: 600;
 `;
 
+const Ill = styled.img`
+  margin-top: 40px;
+  width: 100%;
+`;
+
 const EducationPage = () => {
   return (
     <Main>
@@ -99,6 +105,7 @@ const EducationPage = () => {
           </P2>
         </Card>
       </CardBlock>
+      <Ill src={Illustration} alt="illustration" />
     </Main>
   );
 };
