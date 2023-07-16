@@ -14,6 +14,7 @@ const Main = styled.main`
 `;
 
 const Title = styled.div`
+  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 40px;

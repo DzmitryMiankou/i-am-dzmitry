@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SchoolIcon from "@mui/icons-material/School";
 import PhotoSchool from "../../img/foto_zhilichi.jpg";
@@ -6,6 +6,11 @@ import PhotoMGU from "../../img/07.jpg";
 import PhotoBGU from "../../img/bizn.jpg";
 import Illustration from "../../img/iil2.svg";
 import { Main, Title, H1 } from "../../style/globalStyle";
+
+interface Props<T> {
+  getIsShown: T;
+  number: T;
+}
 
 const CardBlock = styled.div`
   display: grid;
@@ -18,20 +23,24 @@ const CardBlock = styled.div`
   }
 `;
 
-const Card = styled.div`
+const Card = styled.div<Props<string>>`
   border: 2px solid var(--color-violet);
   display: grid;
   justify-items: center;
   text-align: center;
 `;
 
-const Photo = styled.img`
+const Photo = styled.img<Props<string>>`
   width: 390px;
-  filter: grayscale(60%);
+  transition: 0.2s;
+  filter: ${(p: Props<string>) =>
+    p.getIsShown === p.number ? "grayscale(0%)" : "grayscale(50%)"};
 `;
 
-const P1 = styled.p`
-  color: var(--color-violet);
+const P1 = styled.p<Props<string>>`
+  transition: 0.2s;
+  color: ${(p: Props<string>) =>
+    p.getIsShown === p.number ? "var(--color-yellow)" : "var(--color-violet)"};
   font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
@@ -67,17 +76,40 @@ const CardData: Array<{ p1: string; img: string; p2: string }> = [
 ];
 
 const EducationPage = () => {
+  const [getIsShown, setIsShown] = useState<string>("");
+
+  const handleFocusEvent = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    id: string
+  ) => {
+    event.preventDefault();
+    setIsShown(id);
+  };
+
   return (
     <Main>
       <Title>
         <H1>Моё образование</H1>
-        <SchoolIcon sx={{ color: "#a89817", fontSize: "3rem" }} />
+        <SchoolIcon sx={{ color: "var(--color-yellow)", fontSize: "3rem" }} />
       </Title>
       <CardBlock>
         {CardData.map(({ p1, img, p2 }, i) => (
-          <Card key={i}>
-            <P1>{p1}»</P1>
-            <Photo src={img} alt="photo" />
+          <Card
+            number={`${i}`}
+            getIsShown={getIsShown}
+            key={i}
+            onMouseEnter={(e) => handleFocusEvent(e, `${i}`)}
+            onMouseLeave={(e) => handleFocusEvent(e, "")}
+          >
+            <P1 number={`${i}`} getIsShown={getIsShown}>
+              {p1}
+            </P1>
+            <Photo
+              number={`${i}`}
+              getIsShown={getIsShown}
+              src={img}
+              alt="photo"
+            />
             <P2>{p2}</P2>
           </Card>
         ))}

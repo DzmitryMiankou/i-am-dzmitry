@@ -14,7 +14,7 @@ const StackPage = () => {
     <Main>
       <Title>
         <H1>Стек технологий</H1>
-        <BiotechIcon sx={{ color: "#a89817", fontSize: "3rem" }} />
+        <BiotechIcon sx={{ color: "var(--color-yellow)", fontSize: "3rem" }} />
       </Title>
       <P>Front-end</P>
       <P>Back-end</P>
