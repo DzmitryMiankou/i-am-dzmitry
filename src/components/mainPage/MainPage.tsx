@@ -2,20 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import MainPhoto from "../../img/mainPhoto.jpg";
 import SvgIllustration from "./svgIllustration/SvgIllustration";
+import { Main } from "../../style/globalStyle";
 
-const Main = styled.main`
-  width: 80%;
+const Main2 = styled(Main)`
   display: flex;
   gap: 40px;
-  @media (max-width: 1675px) {
-    width: 85%;
-  }
-  @media (max-width: 1570px) {
-    width: 90%;
-  }
-  @media (max-width: 1570px) {
-    width: 92%;
-  }
 `;
 
 const NameContainer = styled.main`
@@ -50,7 +41,7 @@ const Photo = styled.img`
 
 const MainPage = () => {
   return (
-    <Main>
+    <Main2>
       <NameContainer>
         <H1>Front-end developer</H1>
         <H2>Дмитрий Меньков</H2>
@@ -59,7 +50,7 @@ const MainPage = () => {
       <BorderPhoto>
         <Photo src={MainPhoto} alt="my-photo" />
       </BorderPhoto>
-    </Main>
+    </Main2>
   );
 };
 

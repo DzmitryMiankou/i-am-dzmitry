@@ -10,6 +10,7 @@ const FooterB = styled.footer`
   display: flex;
   align-items: center;
   background-color: #7b5eff;
+  z-index: 99;
 `;
 
 const ContainerWi = styled.div`

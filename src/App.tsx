@@ -14,6 +14,7 @@ const AppStyle = styled.div`
 const Page = styled.div`
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 `;
 
 const App = () => {

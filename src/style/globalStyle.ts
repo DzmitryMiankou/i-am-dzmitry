@@ -1,7 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const opacity = keyframes`
+ 0% {  opacity: 0;  margin-top: -50px; }
+ 100% {  opacity: 1;  margin-left: 0px;}
+`;
 
 const Main = styled.main`
   width: 80%;
+  animation-duration: 0.7s;
+  animation-name: ${opacity};
+  animation-timing-function: ease-in-out;
   @media (max-width: 1675px) {
     width: 85%;
   }
