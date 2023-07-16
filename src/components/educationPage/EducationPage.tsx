@@ -20,7 +20,7 @@ const Main = styled.main`
 `;
 
 const H1 = styled.h1`
-  color: #a89817;
+  color: var(--color-yellow);
   font-size: 3rem;
   text-transform: uppercase;
 `;
@@ -43,7 +43,7 @@ const CardBlock = styled.div`
 `;
 
 const Card = styled.div`
-  border: 2px solid #7b5eff;
+  border: 2px solid var(--color-violet);
   display: grid;
   justify-items: center;
   text-align: center;
@@ -55,7 +55,7 @@ const Photo = styled.img`
 `;
 
 const P1 = styled.p`
-  color: #7b5eff;
+  color: var(--color-violet);
   font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
@@ -72,6 +72,24 @@ const Ill = styled.img`
   width: 100%;
 `;
 
+const CardData: Array<{ p1: string; img: string; p2: string }> = [
+  {
+    p1: "ГУО «Жиличская школа искусств»",
+    img: PhotoSchool,
+    p2: "Направление «Изобразительное искусство». Изучал основы рисунка, историю искусств",
+  },
+  {
+    p1: "МГУ им. А. А. Кулешова",
+    img: PhotoMGU,
+    p2: "Историко-филологический факультет. Изучал педагогику, психологию, историю стран мира",
+  },
+  {
+    p1: "Институт бизнеса БГУ",
+    img: PhotoBGU,
+    p2: " Web-дизайн и программирование. Изучал серверные технологии, JavaScript, компьютерные сети, основы дизайн и компьютерной графики",
+  },
+];
+
 const EducationPage = () => {
   return (
     <Main>
@@ -80,30 +98,13 @@ const EducationPage = () => {
         <SchoolIcon sx={{ color: "#a89817", fontSize: "3rem" }} />
       </Title>
       <CardBlock>
-        <Card>
-          <P1>ГУО «Жиличская школа искусств»</P1>
-          <Photo src={PhotoSchool} alt="photo" />
-          <P2>
-            Направление «Изобразительное искусство». Изучал основы рисунка,
-            историю искусств
-          </P2>
-        </Card>
-        <Card>
-          <P1>МГУ им. А. А. Кулешова</P1>
-          <Photo src={PhotoMGU} alt="photo" />
-          <P2>
-            Историко-филологический факультет. Изучал педагогику, психологию,
-            историю стран мира
-          </P2>
-        </Card>
-        <Card>
-          <P1>Институт бизнеса БГУ</P1>
-          <Photo src={PhotoBGU} alt="photo" />
-          <P2>
-            Web-дизайн и программирование. Изучал серверные технологии,
-            JavaScript, компьютерные сети, основы дизайн и компьютерной графики
-          </P2>
-        </Card>
+        {CardData.map(({ p1, img, p2 }, i) => (
+          <Card key={i}>
+            <P1>{p1}»</P1>
+            <Photo src={img} alt="photo" />
+            <P2>{p2}</P2>
+          </Card>
+        ))}
       </CardBlock>
       <Ill src={Illustration} alt="illustration" />
     </Main>

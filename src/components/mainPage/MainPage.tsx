@@ -23,7 +23,7 @@ const NameContainer = styled.main`
 `;
 
 const H1 = styled.h1`
-  color: #a89817;
+  color: var(--color-yellow);
   font-size: 10rem;
   line-height: 10rem;
 `;
@@ -42,9 +42,9 @@ const BorderPhoto = styled.div`
 
 const Photo = styled.img`
   width: 500px;
-  border: 20px solid #7b5eff;
-  border-bottom: 70px solid #7b5eff;
-  box-shadow: 20px 0px 0px 0px #a89817;
+  border: 20px solid var(--color-violet);
+  border-bottom: 70px solid var(--color-violet);
+  box-shadow: 20px 0px 0px 0px var(--color-yellow);
 `;
 
 const MainPage = () => {

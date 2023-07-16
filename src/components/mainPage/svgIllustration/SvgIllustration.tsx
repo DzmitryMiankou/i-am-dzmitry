@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Rect1 = styled.rect`
-  fill: #7b5eff;
+  fill: var(--color-violet);
 `;
 
 const Rect2 = styled.rect`
-  fill: #a89817;
+  fill: var(--color-yellow);
 `;
 
 const SvgIllustration = () => {
