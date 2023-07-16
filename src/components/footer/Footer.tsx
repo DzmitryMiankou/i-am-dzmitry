@@ -16,13 +16,8 @@ const ContainerWi = styled.div`
   width: 98%;
   margin: auto;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 20px;
-`;
-
-const Contact = styled.div`
-  color: var(--colour-white);
-  font-size: 3rem;
 `;
 
 const Href = styled.a`
@@ -35,13 +30,14 @@ const Href = styled.a`
   }
 `;
 
-const Prel = styled.div`
-  display: flex;
-  align-items: center;
+const Contact = styled.p`
+  color: var(--colour-white);
+  font-size: 2.1rem;
+  margin-top: -10px;
 `;
 
 const ArrowL = styled.img`
-  width: 50%;
+  width: 40%;
 `;
 
 const Social = styled.div`
@@ -58,13 +54,21 @@ const Span = styled.div`
   background-color: var(--colour-white);
 `;
 
+const Copirite = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Time = styled.span`
+  color: #d3d6e5;
+`;
+
 const Footer = () => {
   return (
     <FooterB>
       <ContainerWi>
-        <Prel>
-          <Contact>contact</Contact>
-        </Prel>
+        <Contact>contact</Contact>
         <ArrowL src={Arrow} alt="arrow" />
         <Social>
           <Href href="mailto:gmiankou@gmail.com" aria-label="gmail">
@@ -94,6 +98,11 @@ const Footer = () => {
             <SvgBehance />
           </Href>
         </Social>
+        <Span />
+        <Copirite>
+          <Time>{`© 2022 - ${new Date().getFullYear()}`}</Time>
+          <Time>г. Молодечно, Дмитрий Меньков</Time>
+        </Copirite>
       </ContainerWi>
     </FooterB>
   );

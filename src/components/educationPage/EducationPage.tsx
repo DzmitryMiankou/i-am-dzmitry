@@ -8,8 +8,8 @@ import Illustration from "../../img/iil2.svg";
 import { Main, Title, H1 } from "../../style/globalStyle";
 
 interface Props<T> {
-  getIsShown: T;
-  number: T;
+  $getisshown: T;
+  $idel: T;
 }
 
 const CardBlock = styled.div`
@@ -28,19 +28,20 @@ const Card = styled.div<Props<string>>`
   display: grid;
   justify-items: center;
   text-align: center;
+  min-height: 300px;
 `;
 
 const Photo = styled.img<Props<string>>`
   width: 390px;
   transition: 0.2s;
   filter: ${(p: Props<string>) =>
-    p.getIsShown === p.number ? "grayscale(0%)" : "grayscale(50%)"};
+    p.$getisshown === p.$idel ? "grayscale(0%)" : "grayscale(50%)"};
 `;
 
 const P1 = styled.p<Props<string>>`
   transition: 0.2s;
   color: ${(p: Props<string>) =>
-    p.getIsShown === p.number ? "var(--color-yellow)" : "var(--color-violet)"};
+    p.$getisshown === p.$idel ? "var(--color-yellow)" : "var(--color-violet)"};
   font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
@@ -76,14 +77,14 @@ const CardData: Array<{ p1: string; img: string; p2: string }> = [
 ];
 
 const EducationPage = () => {
-  const [getIsShown, setIsShown] = useState<string>("");
+  const [getIsShown, setIsShown] = useState<string>(" ");
 
   const handleFocusEvent = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     id: string
   ) => {
     event.preventDefault();
-    setIsShown(id);
+    setIsShown(`${id}`);
   };
 
   return (
@@ -95,18 +96,18 @@ const EducationPage = () => {
       <CardBlock>
         {CardData.map(({ p1, img, p2 }, i) => (
           <Card
-            number={`${i}`}
-            getIsShown={getIsShown}
+            $idel={`${i}`}
+            $getisshown={getIsShown}
             key={i}
             onMouseEnter={(e) => handleFocusEvent(e, `${i}`)}
-            onMouseLeave={(e) => handleFocusEvent(e, "")}
+            onMouseLeave={(e) => handleFocusEvent(e, " ")}
           >
-            <P1 number={`${i}`} getIsShown={getIsShown}>
+            <P1 $idel={`${i}`} $getisshown={getIsShown}>
               {p1}
             </P1>
             <Photo
-              number={`${i}`}
-              getIsShown={getIsShown}
+              $idel={`${i}`}
+              $getisshown={getIsShown}
               src={img}
               alt="photo"
             />
