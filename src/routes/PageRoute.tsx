@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "../components/mainPage/MainPage";
 import EducationPage from "../components/educationPage/EducationPage";
+import StackPage from "../components/stackPage/StackPage";
 
 const H1 = styled.h1`
   color: #aa0000;
@@ -12,7 +13,7 @@ const PageRoute = () => {
   const arrToElem: Array<{ element: JSX.Element; path: string }> = [
     { element: <MainPage />, path: "/" },
     { element: <EducationPage />, path: "/education" },
-    { element: <H1>стек</H1>, path: "/stack" },
+    { element: <StackPage />, path: "/stack" },
     { element: <H1>Примеры</H1>, path: "/my-works" },
   ];
 

@@ -27,6 +27,7 @@ const H1 = styled.h1`
   font-size: 10rem;
   line-height: 10rem;
 `;
+
 const H2 = styled.h2`
   color: #a89717c3;
   font-size: 3rem;

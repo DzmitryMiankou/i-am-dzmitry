@@ -5,31 +5,7 @@ import PhotoSchool from "../../img/foto_zhilichi.jpg";
 import PhotoMGU from "../../img/07.jpg";
 import PhotoBGU from "../../img/bizn.jpg";
 import Illustration from "../../img/iil2.svg";
-
-const Main = styled.main`
-  width: 80%;
-  @media (max-width: 1675px) {
-    width: 85%;
-  }
-  @media (max-width: 1570px) {
-    width: 90%;
-  }
-  @media (max-width: 1570px) {
-    width: 92%;
-  }
-`;
-
-const H1 = styled.h1`
-  color: var(--color-yellow);
-  font-size: 3rem;
-  text-transform: uppercase;
-`;
-
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 40px;
-`;
+import { Main, Title, H1 } from "../../style/globalStyle";
 
 const CardBlock = styled.div`
   display: grid;
