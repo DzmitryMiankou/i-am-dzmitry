@@ -4,21 +4,25 @@ import { NavLink } from "react-router-dom";
 import LogoSvg from "../../img/Logo.svg";
 
 const Block = styled.header`
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: flex-end;
   background-color: #7b5eff;
 `;
 
-const Menu = styled.menu`
+const BlockWidth = styled.div`
   width: 98%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 60px auto;
+`;
+
+const Menu = styled.menu`
+  margin-left: auto;
 `;
 
 const Ul = styled.ul`
   display: flex;
-  gap: 3%;
-  justify-content: flex-end;
+  gap: 40px;
 `;
 
 const Li = styled.li``;
@@ -37,6 +41,8 @@ const LinkElem = styled(NavLink)`
   }
 `;
 
+const Logo = styled.img``;
+
 const arrMenu: Array<{ element: string; to: string }> = [
   { element: "главная", to: "/" },
   { element: "образование", to: "/education" },
@@ -47,15 +53,20 @@ const arrMenu: Array<{ element: string; to: string }> = [
 const Header = () => {
   return (
     <Block>
-      <Menu>
-        <Ul>
-          {arrMenu.map(({ element, to }, i) => (
-            <Li key={i}>
-              <LinkElem to={to}>{element}</LinkElem>
-            </Li>
-          ))}
-        </Ul>
-      </Menu>
+      <BlockWidth>
+        <LinkElem to="/">
+          <Logo src={LogoSvg} alt="logo" />
+        </LinkElem>
+        <Menu>
+          <Ul>
+            {arrMenu.map(({ element, to }, i) => (
+              <Li key={i}>
+                <LinkElem to={to}>{element}</LinkElem>
+              </Li>
+            ))}
+          </Ul>
+        </Menu>
+      </BlockWidth>
     </Block>
   );
 };

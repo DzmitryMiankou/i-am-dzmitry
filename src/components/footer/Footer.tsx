@@ -4,6 +4,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import EmailIcon from "@mui/icons-material/Email";
 import SvgBehance from "./SvgBehance/SvgBenance";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Arrow from "../../img/Arrow.svg";
 
 const FooterB = styled.footer`
   display: flex;
@@ -24,7 +25,7 @@ const Contact = styled.div`
   font-size: 3rem;
 `;
 
-const Email = styled.a`
+const Href = styled.a`
   color: #d3d6e5;
   font-size: 1.5rem;
   display: flex;
@@ -39,11 +40,8 @@ const Prel = styled.div`
   align-items: center;
 `;
 
-const Line = styled.div`
-  content: " ";
+const ArrowL = styled.img`
   width: 50%;
-  height: 3px;
-  background-color: var(--colour-white);
 `;
 
 const Social = styled.div`
@@ -67,22 +65,34 @@ const Footer = () => {
         <Prel>
           <Contact>contact</Contact>
         </Prel>
-        <Line />
+        <ArrowL src={Arrow} alt="arrow" />
         <Social>
-          <Email href="mailto:gmiankou@gmail.com">
+          <Href href="mailto:gmiankou@gmail.com" aria-label="gmail">
             <EmailIcon sx={{ fontSize: "40px" }} />
             gmiankou@gmail.com
-          </Email>
+          </Href>
           <Span />
-          <Email href="https://github.com/DzmitryMiankou" target="_blank">
+          <Href
+            href="https://github.com/DzmitryMiankou"
+            target="_blank"
+            aria-label="github"
+          >
             <GitHubIcon sx={{ fontSize: "40px" }} />
-          </Email>
-          <Email href="https://t.me/GariSeldon" target="_blank">
+          </Href>
+          <Href
+            href="https://t.me/GariSeldon"
+            target="_blank"
+            aria-label="telegram"
+          >
             <TelegramIcon sx={{ fontSize: "40px" }} />
-          </Email>
-          <Email href="https://www.behance.net/287986a2" target="_blank">
+          </Href>
+          <Href
+            href="https://www.behance.net/287986a2"
+            target="_blank"
+            aria-label="behance"
+          >
             <SvgBehance />
-          </Email>
+          </Href>
         </Social>
       </ContainerWi>
     </FooterB>

@@ -31,7 +31,6 @@ const H2 = styled.h2`
   color: #a89717c3;
   font-size: 3rem;
   line-height: 10rem;
-  text-align: right;
 `;
 
 const BorderPhoto = styled.div`
