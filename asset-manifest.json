@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/i-am-dzmitry/static/css/main.f507b171.css",
-    "main.js": "/i-am-dzmitry/static/js/main.12b3b7b9.js",
+    "main.js": "/i-am-dzmitry/static/js/main.eec36d93.js",
     "static/js/787.e12319fe.chunk.js": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js",
     "static/media/07.jpg": "/i-am-dzmitry/static/media/07.90f4954fc8d49254292d.jpg",
     "static/media/foto_zhilichi.jpg": "/i-am-dzmitry/static/media/foto_zhilichi.f4aa191c7e1992daef5c.jpg",
@@ -12,11 +12,11 @@
     "index.html": "/i-am-dzmitry/index.html",
     "static/media/Arrow.svg": "/i-am-dzmitry/static/media/Arrow.4ed81c68234598e976a9e2d7b4d0ff3d.svg",
     "main.f507b171.css.map": "/i-am-dzmitry/static/css/main.f507b171.css.map",
-    "main.12b3b7b9.js.map": "/i-am-dzmitry/static/js/main.12b3b7b9.js.map",
+    "main.eec36d93.js.map": "/i-am-dzmitry/static/js/main.eec36d93.js.map",
     "787.e12319fe.chunk.js.map": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f507b171.css",
-    "static/js/main.12b3b7b9.js"
+    "static/js/main.eec36d93.js"
   ]
 }
