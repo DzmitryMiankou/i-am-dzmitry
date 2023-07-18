@@ -5,7 +5,7 @@ import PhotoSchool from "../../img/foto_zhilichi.jpg";
 import PhotoMGU from "../../img/07.jpg";
 import PhotoBGU from "../../img/bizn.jpg";
 import Illustration from "../../img/iil2.svg";
-import { Main, Title, H1 } from "../../style/globalStyle";
+import { Main, Title, H1, titleIconStyleSX } from "../../style/globalStyle";
 
 interface Props<T> {
   $getisshown: T;
@@ -72,7 +72,7 @@ const CardData: Array<{ p1: string; img: string; p2: string }> = [
   {
     p1: "Институт бизнеса БГУ",
     img: PhotoBGU,
-    p2: " Web-дизайн и программирование. Изучал серверные технологии, JavaScript, компьютерные сети, основы дизайн и компьютерной графики",
+    p2: " Web-дизайн и программирование. Изучал серверные технологии, JavaScript, компьютерные сети, основы дизайна и компьютерной графики",
   },
 ];
 
@@ -91,7 +91,7 @@ const EducationPage = () => {
     <Main>
       <Title>
         <H1>Моё образование</H1>
-        <SchoolIcon sx={{ color: "var(--color-yellow)", fontSize: "3rem" }} />
+        <SchoolIcon sx={titleIconStyleSX} />
       </Title>
       <CardBlock>
         {CardData.map(({ p1, img, p2 }, i) => (

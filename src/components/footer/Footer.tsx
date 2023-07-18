@@ -65,6 +65,28 @@ const Time = styled.span`
   color: #d3d6e5;
 `;
 
+const arrContact: Array<{
+  href: string;
+  ariaLabel: string;
+  icon: JSX.Element;
+}> = [
+  {
+    href: "https://github.com/DzmitryMiankou",
+    ariaLabel: "github",
+    icon: <GitHubIcon sx={{ fontSize: "40px" }} />,
+  },
+  {
+    href: "https://t.me/GariSeldon",
+    ariaLabel: "telegram",
+    icon: <TelegramIcon sx={{ fontSize: "40px" }} />,
+  },
+  {
+    href: "https://www.behance.net/287986a2",
+    ariaLabel: "behance",
+    icon: <SvgBehance />,
+  },
+];
+
 const Footer = () => {
   return (
     <FooterB>
@@ -73,31 +95,20 @@ const Footer = () => {
         <ArrowL src={Arrow} alt="arrow" />
         <Social>
           <Href href="mailto:gmiankou@gmail.com" aria-label="gmail">
-            <EmailIcon sx={{ fontSize: "40px" }} />
+            <EmailIcon sx={{ fontSize: "40px", marginRight: "10px" }} />
             gmiankou@gmail.com
           </Href>
           <Span />
-          <Href
-            href="https://github.com/DzmitryMiankou"
-            target="_blank"
-            aria-label="github"
-          >
-            <GitHubIcon sx={{ fontSize: "40px" }} />
-          </Href>
-          <Href
-            href="https://t.me/GariSeldon"
-            target="_blank"
-            aria-label="telegram"
-          >
-            <TelegramIcon sx={{ fontSize: "40px" }} />
-          </Href>
-          <Href
-            href="https://www.behance.net/287986a2"
-            target="_blank"
-            aria-label="behance"
-          >
-            <SvgBehance />
-          </Href>
+          {arrContact.map(({ href, ariaLabel, icon }) => (
+            <Href
+              key={ariaLabel}
+              href={href}
+              target="_blank"
+              aria-label={ariaLabel}
+            >
+              {icon}
+            </Href>
+          ))}
         </Social>
         <Span />
         <Copirite>

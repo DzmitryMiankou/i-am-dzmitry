@@ -34,4 +34,6 @@ const H1 = styled.h1`
   text-transform: uppercase;
 `;
 
-export { Main, Title, H1 };
+const titleIconStyleSX = { color: "var(--color-yellow)", fontSize: "3rem" };
+
+export { Main, Title, H1, titleIconStyleSX };
