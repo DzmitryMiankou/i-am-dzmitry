@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import styled from "styled-components";
+import { rows, Data } from "./dataTable";
 
 const P = styled.div`
   font-size: 1.7rem;
@@ -22,71 +23,6 @@ const A = styled.a`
     color: #7676ff;
   }
 `;
-
-type RowDataType = { text: string; href: string };
-
-interface Data {
-  frontEnd: string;
-  carbs: string;
-  fat: string;
-  name: RowDataType;
-}
-
-function createData(
-  name: RowDataType,
-  frontEnd: string,
-  fat: string,
-  carbs: string
-): Data {
-  return {
-    name,
-    frontEnd,
-    fat,
-    carbs,
-  };
-}
-
-const rows = [
-  createData(
-    { text: "JavaScript", href: "https://ru.wikipedia.org/wiki/JavaScript" },
-    "React",
-    "NodeJS",
-    "Figma"
-  ),
-  createData(
-    { text: "TypeScript", href: "https://ru.wikipedia.org/wiki/TypeScript" },
-    "Redux",
-    "ExpressJS",
-    "Adobe Illustrator"
-  ),
-  createData(
-    { text: "HTML5", href: "https://ru.wikipedia.org/wiki/HTML5" },
-    "Style-component",
-    "Mesql server",
-    "Adobe Photoshop"
-  ),
-  createData(
-    {
-      text: "CSS3",
-      href: "https://ru.wikipedia.org/wiki/CSS#%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_3_(CSS3)",
-    },
-    "MUI",
-    "JWT-token",
-    "Corel Drow"
-  ),
-  createData(
-    { text: "SCSS", href: "https://ru.wikipedia.org/wiki/Sass" },
-    "RTK-Query",
-    "SocketIO",
-    "Miro"
-  ),
-  createData(
-    { text: "MySQL", href: "https://ru.wikipedia.org/wiki/MySQL" },
-    "React-router-dom",
-    "Ubuntu",
-    "Adobe after Effect"
-  ),
-];
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -103,20 +39,14 @@ type Order = "asc" | "desc";
 function getComparator<Key extends keyof any>(
   order: Order,
   orderBy: Key
-): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
-) => number {
+): (a: { [key in Key]: any }, b: { [key in Key]: any }) => any {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-function stableSort<T>(
-  array: readonly T[],
-  comparator: (a: T, b: T) => number
-) {
-  const stabilizedThis = array.map((el, index) => [el, index] as [T, number]);
+function stableSort<T>(array: readonly T[], comparator: (a: T, b: T) => any) {
+  const stabilizedThis = array.map((el, index) => [el, index] as [T, any]);
   stabilizedThis.sort((a, b) => {
     const order = comparator(a[0], b[0]);
     if (order !== 0) {
@@ -130,7 +60,7 @@ function stableSort<T>(
 interface HeadCell {
   disablePadding: boolean;
   id: keyof Data;
-  label: string;
+  label: any;
   numeric: boolean;
 }
 
@@ -207,9 +137,25 @@ export default function EnhancedTable() {
                         {row.name.text}
                       </A>
                     </TableCell>
-                    <TableCell align="right">{row.frontEnd}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
+                    <TableCell align="right">
+                      <A
+                        href={row.frontEnd.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {row.frontEnd.text}
+                      </A>
+                    </TableCell>
+                    <TableCell align="right">
+                      <A href={row.fat.href} target="_blank" rel="noreferrer">
+                        {row.fat.text}
+                      </A>
+                    </TableCell>
+                    <TableCell align="right">
+                      <A href={row.carbs.href} target="_blank" rel="noreferrer">
+                        {row.carbs.text}
+                      </A>
+                    </TableCell>
                   </TableRow>
                 );
               })}
