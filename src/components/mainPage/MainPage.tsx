@@ -42,7 +42,11 @@ const Photo = styled.img`
 const Before = styled.p`
   color: var(--color-violet);
   font-size: 1.5rem;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
+`;
+
+const Before2 = styled(Before)`
+  margin: 0;
 `;
 
 const MainPage = () => {
@@ -51,7 +55,8 @@ const MainPage = () => {
       <NameContainer>
         <H1>Front-end developer</H1>
         <H2>Дмитрий Меньков</H2>
-        <Before>Педагог, филантроп</Before>
+        <Before>...педагог, гуманист</Before>
+        <Before2>...</Before2>
         <SvgIllustration />
       </NameContainer>
       <BorderPhoto>

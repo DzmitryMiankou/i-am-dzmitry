@@ -25,6 +25,7 @@ const Card = styled.div<Props<string>>`
   justify-items: center;
   text-align: center;
   min-height: 300px;
+  gap: 10px;
 `;
 
 const Photo = styled.img<Props<string>>`
@@ -58,26 +59,24 @@ const ExamplePage = () => {
         <H1>Примеры</H1>
         <HexagonIcon sx={titleIconStyleSX} />
       </Title>
-      <Block>Программирование</Block>
-      <CardBlock>
-        {CardData.map(({ title, href }, i) => (
-          <Card $idel={`${i}`} key={i}>
-            <P1 $idel={`${i}`}>{title}</P1>
-            <Photo $idel={`${i}`} alt="photo" />
-            <P2>{href}</P2>
-          </Card>
+      <div>
+        {CardData.map(({ title, data }, i) => (
+          <React.Fragment key={i}>
+            <Block>{title}</Block>
+            <CardBlock>
+              {data.map(({ text, img, href }, id) => (
+                <div key={id}>
+                  <Card $idel={`${id}`}>
+                    <P1 $idel={`${id}`}>{text}</P1>
+                    <Photo $idel={`${id}`} alt="photo" src={img} />
+                    <P2>{href}</P2>
+                  </Card>
+                </div>
+              ))}
+            </CardBlock>
+          </React.Fragment>
         ))}
-      </CardBlock>
-      <Block>Графика и дизайн</Block>
-      <CardBlock>
-        {CardData.map(({ title, href }, i) => (
-          <Card $idel={`${i}`} key={i}>
-            <P1 $idel={`${i}`}>{title}</P1>
-            <Photo $idel={`${i}`} alt="photo" />
-            <P2>{title}</P2>
-          </Card>
-        ))}
-      </CardBlock>
+      </div>
     </Main>
   );
 };

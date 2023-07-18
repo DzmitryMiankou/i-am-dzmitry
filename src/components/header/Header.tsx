@@ -16,7 +16,7 @@ const BlockWidth = styled.div`
   grid-template-columns: 60px auto;
 `;
 
-const Menu = styled.menu`
+const Menu = styled.nav`
   margin-left: auto;
 `;
 

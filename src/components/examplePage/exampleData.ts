@@ -1,17 +1,32 @@
-type CardDataType = { title: string; href: string };
+type CardDataType = {
+  title: string;
+  data: Array<{ text: string; img: string; href: string }>;
+};
 
 const CardData: Array<CardDataType> = [
   {
-    title: "ГУО «Жиличская школа искусств»",
-    href: "Направление «Изобразительное искусство». Изучал основы рисунка, историю искусств",
+    title: "Программирование",
+    data: [
+      { text: "1", img: "sdbsd", href: "sfdbs" },
+      { text: "2", img: "sdbdsvsd", href: "sfdsvdbs" },
+      { text: "3", img: "sdbdsvsd", href: "sfdsvdbs" },
+    ],
   },
   {
-    title: "МГУ им. А. А. Кулешова",
-    href: "Историко-филологический факультет. Изучал педагогику, психологию, историю стран мира",
+    title: "Графика и дизайн",
+    data: [
+      { text: "1", img: "sdbsd", href: "sfdbs" },
+      { text: "2", img: "sdbdsvsd", href: "sfdsvdbs" },
+      { text: "3", img: "sdbdsvsd", href: "sfdsvdbs" },
+    ],
   },
   {
-    title: "Институт бизнеса БГУ",
-    href: " Web-дизайн и программирование. Изучал серверные технологии, JavaScript, компьютерные сети, основы дизайна и компьютерной графики",
+    title: "Анимация",
+    data: [
+      { text: "1", img: "sdbsd", href: "sfdbs" },
+      { text: "2", img: "sdbdsvsd", href: "sfdsvdbs" },
+      { text: "3", img: "sdbdsvsd", href: "sfdsvdbs" },
+    ],
   },
 ];
 
