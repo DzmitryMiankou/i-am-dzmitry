@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "../components/mainPage/MainPage";
 import EducationPage from "../components/educationPage/EducationPage";
 import StackPage from "../components/stackPage/StackPage";
+import ExamplePage from "../components/examplePage/ExamplePage";
 
 const H1 = styled.h1`
   color: #aa0000;
@@ -14,7 +15,7 @@ const PageRoute = () => {
     { element: <MainPage />, path: "/" },
     { element: <EducationPage />, path: "/education" },
     { element: <StackPage />, path: "/stack" },
-    { element: <H1>Примеры</H1>, path: "/my-works" },
+    { element: <ExamplePage />, path: "/my-works" },
   ];
 
   return (

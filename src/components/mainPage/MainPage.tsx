@@ -22,7 +22,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   color: #a89717c3;
   font-size: 3rem;
-  line-height: 10rem;
+  margin: 20px 0;
 `;
 
 const BorderPhoto = styled.div`
@@ -39,12 +39,19 @@ const Photo = styled.img`
   box-shadow: 20px 0px 0px 0px var(--color-yellow);
 `;
 
+const Before = styled.p`
+  color: var(--color-violet);
+  font-size: 1.5rem;
+  margin: 20px 0;
+`;
+
 const MainPage = () => {
   return (
     <Main2>
       <NameContainer>
         <H1>Front-end developer</H1>
         <H2>Дмитрий Меньков</H2>
+        <Before>Педагог, филантроп</Before>
         <SvgIllustration />
       </NameContainer>
       <BorderPhoto>
