@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Main, Title, H1, titleIconStyleSX } from "../../style/globalStyle";
 import HexagonIcon from "@mui/icons-material/Hexagon";
 import { CardData } from "./exampleData";
+import CenterMode from "./slider/Slider";
 
 interface Props<T> {
   $idel: T;
@@ -59,6 +60,8 @@ const ExamplePage = () => {
         <H1>Примеры</H1>
         <HexagonIcon sx={titleIconStyleSX} />
       </Title>
+      <Block>Графика и дизайн</Block>
+      <CenterMode />
       <div>
         {CardData.map(({ title, data }, i) => (
           <React.Fragment key={i}>
