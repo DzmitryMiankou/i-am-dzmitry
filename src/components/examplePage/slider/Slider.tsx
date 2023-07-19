@@ -10,7 +10,7 @@ import Img5 from "../../../img/sliderImg/Screenshot 2023-07-19 150404.png";
 
 const CenterMode = () => {
   const settings = {
-    className: "center",
+    className: "slider variable-width",
     centerMode: true,
     infinite: true,
     centerPadding: "0",

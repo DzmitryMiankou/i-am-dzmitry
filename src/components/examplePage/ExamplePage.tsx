@@ -80,6 +80,8 @@ const ExamplePage = () => {
           </React.Fragment>
         ))}
       </div>
+      <Block>Графические работы моих учеников</Block>
+      <CenterMode />
     </Main>
   );
 };
