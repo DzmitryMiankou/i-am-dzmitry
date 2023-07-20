@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import LogoSvg from "../../img/Logo.svg";
+import TemporaryDrawer from "./Drawer/Drawer";
 
 const Block = styled.header`
   display: grid;
   align-items: center;
-  background-color: #7b5eff;
+  background-color: var(--color-violet);
 `;
 
 const BlockWidth = styled.div`
@@ -18,6 +19,9 @@ const BlockWidth = styled.div`
 
 const Menu = styled.nav`
   margin-left: auto;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const Ul = styled.ul`
@@ -43,12 +47,32 @@ const LinkElem = styled(NavLink)`
 
 const Logo = styled.img``;
 
+const MobileMenu = styled.div`
+  display: none;
+  @media (max-width: 900px) {
+    display: block;
+    margin-left: auto;
+  }
+`;
+
 const arrMenu: Array<{ element: string; to: string }> = [
   { element: "главная", to: "/" },
   { element: "образование", to: "/education" },
   { element: "стек", to: "/stack" },
   { element: "примеры", to: "/my-works" },
 ];
+
+const Link = () => {
+  return (
+    <>
+      {arrMenu.map(({ element, to }, i) => (
+        <Li key={i}>
+          <LinkElem to={to}>{element}</LinkElem>
+        </Li>
+      ))}
+    </>
+  );
+};
 
 const Header = () => {
   return (
@@ -57,13 +81,12 @@ const Header = () => {
         <LinkElem to="/">
           <Logo src={LogoSvg} alt="logo" />
         </LinkElem>
+        <MobileMenu>
+          <TemporaryDrawer element={<Link />} />
+        </MobileMenu>
         <Menu>
           <Ul>
-            {arrMenu.map(({ element, to }, i) => (
-              <Li key={i}>
-                <LinkElem to={to}>{element}</LinkElem>
-              </Li>
-            ))}
+            <Link />
           </Ul>
         </Menu>
       </BlockWidth>

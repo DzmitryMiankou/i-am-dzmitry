@@ -26,14 +26,25 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   gap: 40px;
+  @media (max-width: 900px) {
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 const H1 = styled.h1`
   color: var(--color-yellow);
   font-size: 3rem;
   text-transform: uppercase;
+  @media (max-width: 550px) {
+    font-size: 30px;
+  }
 `;
 
-const titleIconStyleSX = { color: "var(--color-yellow)", fontSize: "3rem" };
+const titleIconStyleSX = {
+  color: "var(--color-yellow)",
+  fontSize: "3rem",
+  "@media (max-width: 700px)": { display: "none" },
+};
 
 export { Main, Title, H1, titleIconStyleSX };

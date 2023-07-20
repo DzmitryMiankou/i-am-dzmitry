@@ -10,7 +10,10 @@ const AppStyle = styled.div`
   display: grid;
   grid-template-rows: 70px auto 70px;
   @media (max-width: 830px) {
-    grid-template-rows: 70px auto 120px;
+    grid-template-rows: 70px auto 150px;
+  }
+  @media (max-width: 380px) {
+    grid-template-rows: 70px auto 280px;
   }
 `;
 

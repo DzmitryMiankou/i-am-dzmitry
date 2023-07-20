@@ -7,7 +7,7 @@ import CenterMode from "./slider/Slider";
 
 const CardBlock = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
   justify-content: space-between;
   margin: 40px 0;
@@ -33,6 +33,9 @@ const Card = styled.a`
 const Photo = styled.img`
   width: 390px;
   transition: 0.2s;
+  @media (max-width: 425px) {
+    width: 290px;
+  }
 `;
 
 const P1 = styled.p`
@@ -46,6 +49,9 @@ const Block = styled.h2`
   color: #5d47be;
   font-weight: 600;
   margin-top: 20px;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const ExamplePage = () => {

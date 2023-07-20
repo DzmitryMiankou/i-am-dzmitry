@@ -47,13 +47,19 @@ const CenterMode = ({ data }: any) => {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1124,
+        breakpoint: 1650,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1180,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 700,
+        breakpoint: 810,
         settings: {
           slidesToShow: 1,
         },

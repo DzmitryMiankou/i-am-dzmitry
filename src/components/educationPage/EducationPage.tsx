@@ -14,21 +14,27 @@ interface Props<T> {
 
 const CardBlock = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
   justify-content: space-between;
   margin: 40px 0;
   @media (max-width: 1350px) {
     justify-content: center;
   }
+  @media (max-width: 410px) {
+    grid-template-columns: 300px;
+  }
 `;
 
-const Card = styled.div<Props<string>>`
+const Card = styled.div`
   border: 2px solid var(--color-violet);
   display: grid;
   justify-items: center;
   text-align: center;
   min-height: 300px;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
 `;
 
 const Photo = styled.img<Props<string>>`
@@ -36,6 +42,9 @@ const Photo = styled.img<Props<string>>`
   transition: 0.2s;
   filter: ${(p: Props<string>) =>
     p.$getisshown === p.$idel ? "grayscale(0%)" : "grayscale(50%)"};
+  @media (max-width: 425px) {
+    width: 290px;
+  }
 `;
 
 const P1 = styled.p<Props<string>>`
@@ -96,8 +105,6 @@ const EducationPage = () => {
       <CardBlock>
         {CardData.map(({ p1, img, p2 }, i) => (
           <Card
-            $idel={`${i}`}
-            $getisshown={getIsShown}
             key={i}
             onMouseEnter={(e) => handleFocusEvent(e, `${i}`)}
             onMouseLeave={(e) => handleFocusEvent(e, " ")}

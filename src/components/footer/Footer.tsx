@@ -11,6 +11,9 @@ const FooterB = styled.footer`
   align-items: center;
   background-color: #7b5eff;
   z-index: 99;
+  @media (max-width: 1000px) {
+    padding-bottom: 30px;
+  }
 `;
 
 const ContainerWi = styled.div`
@@ -28,9 +31,13 @@ const Href = styled.a`
   color: #d3d6e5;
   font-size: 1.5rem;
   display: flex;
+  align-items: center;
   transition: 0.2s;
   &:hover {
     color: var(--colour-white);
+  }
+  @media (max-width: 520px) {
+    font-size: 1rem;
   }
 `;
 
@@ -63,6 +70,10 @@ const Social = styled.div`
   margin-left: auto;
   @media (max-width: 1190px) {
     margin: auto;
+  }
+  @media (max-width: 380px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -98,12 +109,32 @@ const arrContact: Array<{
   {
     href: "https://github.com/DzmitryMiankou",
     ariaLabel: "github",
-    icon: <GitHubIcon sx={{ fontSize: "40px" }} />,
+    icon: (
+      <GitHubIcon
+        sx={{
+          fontSize: "40px",
+          marginRight: "10px",
+          "@media (max-width: 520px)": {
+            fontSize: "25px",
+          },
+        }}
+      />
+    ),
   },
   {
     href: "https://t.me/GariSeldon",
     ariaLabel: "telegram",
-    icon: <TelegramIcon sx={{ fontSize: "40px" }} />,
+    icon: (
+      <TelegramIcon
+        sx={{
+          fontSize: "40px",
+          marginRight: "10px",
+          "@media (max-width: 520px)": {
+            fontSize: "25px",
+          },
+        }}
+      />
+    ),
   },
   {
     href: "https://www.behance.net/287986a2",
@@ -120,8 +151,16 @@ const Footer = () => {
         <ArrowL src={Arrow} alt="arrow" />
         <Social>
           <Href href="mailto:gmiankou@gmail.com" aria-label="gmail">
-            <EmailIcon sx={{ fontSize: "40px", marginRight: "10px" }} />
-            gmiankou@gmail.com
+            <EmailIcon
+              sx={{
+                fontSize: "40px",
+                marginRight: "10px",
+                "@media (max-width: 520px)": {
+                  fontSize: "25px",
+                },
+              }}
+            />
+            <p>gmiankou@gmail.com</p>
           </Href>
           <Span />
           {arrContact.map(({ href, ariaLabel, icon }) => (

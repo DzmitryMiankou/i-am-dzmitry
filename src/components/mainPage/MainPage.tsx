@@ -26,6 +26,7 @@ const NameContainer = styled.div`
   }
   @media (max-width: 1145px) {
     margin: auto;
+    width: 70%;
   }
 `;
 
@@ -41,6 +42,24 @@ const H1 = styled.h1`
     font-size: 7rem;
     line-height: 7rem;
   }
+  @media (max-width: 1145px) {
+    font-size: 6rem;
+    text-align: center;
+  }
+  @media (max-width: 710px) {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  @media (max-width: 590px) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  @media (max-width: 461px) {
+    font-size: 50px;
+  }
+  @media (max-width: 471px) {
+    font-size: 45px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -54,6 +73,9 @@ const H2 = styled.h2`
   @media (max-width: 1200px) {
     font-size: 2rem;
     margin: 10px 0;
+  }
+  @media (max-width: 1145px) {
+    text-align: center;
   }
 `;
 
@@ -82,16 +104,32 @@ const Photo = styled.img`
   @media (max-width: 1200px) {
     width: 370px;
   }
+  @media (max-width: 1145px) {
+    width: 370px;
+  }
+  @media (max-width: 500px) {
+    width: 250px;
+    border-bottom: 30px solid var(--color-violet);
+  }
 `;
 
 const Before = styled.p`
   color: var(--color-violet);
   font-size: 1.5rem;
   margin: 20px 0 0 0;
+  @media (max-width: 1145px) {
+    text-align: center;
+  }
 `;
 
 const Before2 = styled(Before)`
   margin: 0;
+`;
+
+const ContainerSVG = styled.div`
+  @media (max-width: 1145px) {
+    display: none;
+  }
 `;
 
 const MainPage = () => {
@@ -102,7 +140,9 @@ const MainPage = () => {
         <H2>Дмитрий Меньков</H2>
         <Before>...педагог, гуманист</Before>
         <Before2>...</Before2>
-        <SvgIllustration />
+        <ContainerSVG>
+          <SvgIllustration />
+        </ContainerSVG>
       </NameContainer>
       <BorderPhoto>
         <Photo src={MainPhoto} alt="my-photo" />
