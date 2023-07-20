@@ -63,7 +63,7 @@ const MyGraphic: Array<CardDataType2> = [
   {
     title: "Графика и дизайн",
     data: [
-      { text: "Зелёноглазое такси", img: Img1, program: AdobeIL },
+      { text: "Зеленоглазое такси", img: Img1, program: AdobeIL },
       { text: "Осень на Родине", img: Img2, program: AdobeIL },
       { text: "Подарки", img: Img3, program: AdobeIL },
       { text: "Беседка", img: Img4, program: AdobeIL },
