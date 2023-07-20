@@ -2,12 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Main, Title, H1, titleIconStyleSX } from "../../style/globalStyle";
 import HexagonIcon from "@mui/icons-material/Hexagon";
-import { CardData } from "./exampleData";
+import { CardData, MyGraphic } from "./exampleData";
 import CenterMode from "./slider/Slider";
-
-interface Props<T> {
-  $idel: T;
-}
 
 const CardBlock = styled.div`
   display: grid;
@@ -20,30 +16,29 @@ const CardBlock = styled.div`
   }
 `;
 
-const Card = styled.div<Props<string>>`
+const Card = styled.a`
   border: 2px solid var(--color-violet);
   display: grid;
   justify-items: center;
   text-align: center;
   min-height: 300px;
   gap: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    margin-top: -10px;
+  }
 `;
 
-const Photo = styled.img<Props<string>>`
+const Photo = styled.img`
   width: 390px;
   transition: 0.2s;
 `;
 
-const P1 = styled.p<Props<string>>`
+const P1 = styled.p`
   transition: 0.2s;
   font-size: 1.2rem;
   padding: 10px;
-  font-weight: 600;
-`;
-
-const P2 = styled.p`
-  color: #5d47be;
-  padding: 5px;
   font-weight: 600;
 `;
 
@@ -60,8 +55,8 @@ const ExamplePage = () => {
         <H1>Примеры</H1>
         <HexagonIcon sx={titleIconStyleSX} />
       </Title>
-      <Block>Графика и дизайн</Block>
-      <CenterMode />
+      <Block>{MyGraphic[0].title}</Block>
+      <CenterMode data={MyGraphic[0].data} />
       <div>
         {CardData.map(({ title, data }, i) => (
           <React.Fragment key={i}>
@@ -69,10 +64,9 @@ const ExamplePage = () => {
             <CardBlock>
               {data.map(({ text, img, href }, id) => (
                 <div key={id}>
-                  <Card $idel={`${id}`}>
-                    <P1 $idel={`${id}`}>{text}</P1>
-                    <Photo $idel={`${id}`} alt="photo" src={img} />
-                    <P2>{href}</P2>
+                  <Card href={href} target="_blank">
+                    <P1>{text}</P1>
+                    <Photo alt="photo" src={img} />
                   </Card>
                 </div>
               ))}
@@ -80,8 +74,8 @@ const ExamplePage = () => {
           </React.Fragment>
         ))}
       </div>
-      <Block>Графические работы моих учеников</Block>
-      <CenterMode />
+      <Block>{MyGraphic[1].title}</Block>
+      <CenterMode data={MyGraphic[1].data} />
     </Main>
   );
 };

@@ -21,7 +21,6 @@
   position: relative;
   overflow: hidden;
   display: block;
-  margin: 5px;
   padding: 0;
   &:focus {
     outline: none;
@@ -97,7 +96,6 @@
   .slick-vertical & {
     display: block;
     height: auto;
-    border: 1px solid transparent;
   }
 }
 .slick-arrow.slick-hidden {
