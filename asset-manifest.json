@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/i-am-dzmitry/static/css/main.99bf0838.css",
-    "main.js": "/i-am-dzmitry/static/js/main.aa74440f.js",
+    "main.js": "/i-am-dzmitry/static/js/main.475dce35.js",
     "static/js/787.e12319fe.chunk.js": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js",
-    "static/media/Screenshot 2023-07-19 150404.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 150404.eff131ec35a1ae68cf94.png",
     "static/media/Screenshot 2023-07-19 214354.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214354.4a6d4b77a1f5c929a15e.png",
-    "static/media/Screenshot 2023-07-19 150254.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 150254.3661456ab2584f92ad51.png",
-    "static/media/Screenshot 2023-07-19 143917.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 143917.0fcde99ea43ba3a4fdd1.png",
+    "static/media/Screenshot 2023-07-19 150254.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 150254.1455a54209d45fbd032c.png",
     "static/media/4c0641154334663.Y3JvcCwxMzg4LDEwODYsMCwxNTE.png": "/i-am-dzmitry/static/media/4c0641154334663.Y3JvcCwxMzg4LDEwODYsMCwxNTE.29cb48ff98572318cdab.png",
+    "static/media/Screenshot 2023-07-19 150404.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 150404.38a8dbdfb6c7b4eb19c9.png",
     "static/media/home.jpg": "/i-am-dzmitry/static/media/home.f002f95ca2bf505c2d28.jpg",
     "static/media/Screenshot 2023-07-19 214230.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214230.e7de7c05c9f50a80f26b.png",
     "static/media/mart.jpg": "/i-am-dzmitry/static/media/mart.05b3d789fc21deb245b7.jpg",
     "static/media/3394d9154335645.Y3JvcCw5OTksNzgyLDAsMTA4.jpg": "/i-am-dzmitry/static/media/3394d9154335645.Y3JvcCw5OTksNzgyLDAsMTA4.3ff3adc0558e7f830b18.jpg",
     "static/media/Screenshot 2023-07-19 214328.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214328.1efcb19d7bb5370d8ddf.png",
+    "static/media/Screenshot 2023-07-19 143917.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 143917.d956697c17b864e2acda.png",
     "static/media/bear.jpg": "/i-am-dzmitry/static/media/bear.57a6e8ae0a5ac18aba3a.jpg",
     "static/media/Screenshot 2023-07-19 214117.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214117.2a23a2eebc73438fa508.png",
     "static/media/3.jpg": "/i-am-dzmitry/static/media/3.534bdc68dbb456990be1.jpg",
@@ -33,11 +33,11 @@
     "index.html": "/i-am-dzmitry/index.html",
     "static/media/Arrow.svg": "/i-am-dzmitry/static/media/Arrow.4ed81c68234598e976a9e2d7b4d0ff3d.svg",
     "main.99bf0838.css.map": "/i-am-dzmitry/static/css/main.99bf0838.css.map",
-    "main.aa74440f.js.map": "/i-am-dzmitry/static/js/main.aa74440f.js.map",
+    "main.475dce35.js.map": "/i-am-dzmitry/static/js/main.475dce35.js.map",
     "787.e12319fe.chunk.js.map": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.99bf0838.css",
-    "static/js/main.aa74440f.js"
+    "static/js/main.475dce35.js"
   ]
 }
