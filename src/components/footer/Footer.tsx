@@ -19,6 +19,9 @@ const ContainerWi = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  @media (max-width: 830px) {
+    flex-direction: column;
+  }
 `;
 
 const Href = styled.a`
@@ -35,10 +38,22 @@ const Contact = styled.p`
   color: var(--colour-white);
   font-size: 2.1rem;
   margin-top: -10px;
+  @media (max-width: 1190px) {
+    display: none;
+  }
 `;
 
 const ArrowL = styled.img`
   width: 40%;
+  @media (max-width: 1630px) {
+    width: 30%;
+  }
+  @media (max-width: 1360px) {
+    width: 20%;
+  }
+  @media (max-width: 1190px) {
+    display: none;
+  }
 `;
 
 const Social = styled.div`
@@ -46,6 +61,9 @@ const Social = styled.div`
   align-items: baseline;
   gap: 20px;
   margin-left: auto;
+  @media (max-width: 1190px) {
+    margin: auto;
+  }
 `;
 
 const Span = styled.div`
@@ -53,16 +71,23 @@ const Span = styled.div`
   width: 3px;
   height: 40px;
   background-color: var(--colour-white);
+  @media (max-width: 830px) {
+    display: none;
+  }
 `;
 
 const Copirite = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 830px) {
+    text-align: center;
+  }
 `;
 
 const Time = styled.span`
   color: #d3d6e5;
+  white-space: nowrap;
 `;
 
 const arrContact: Array<{

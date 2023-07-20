@@ -9,6 +9,9 @@ const AppStyle = styled.div`
   overflow-y: hidden;
   display: grid;
   grid-template-rows: 70px auto 70px;
+  @media (max-width: 830px) {
+    grid-template-rows: 70px auto 120px;
+  }
 `;
 
 const Page = styled.div`

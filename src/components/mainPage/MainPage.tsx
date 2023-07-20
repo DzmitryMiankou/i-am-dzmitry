@@ -7,22 +7,54 @@ import { Main } from "../../style/globalStyle";
 const Main2 = styled(Main)`
   display: flex;
   gap: 40px;
+  @media (max-width: 1570px) {
+    gap: 30px;
+  }
+  @media (max-width: 1145px) {
+    flex-direction: column;
+  }
 `;
 
-const NameContainer = styled.main`
+const NameContainer = styled.div`
   width: 750px;
+  @media (max-width: 1570px) {
+    margin-left: auto;
+    width: 660px;
+  }
+  @media (max-width: 1200px) {
+    width: 550px;
+  }
+  @media (max-width: 1145px) {
+    margin: auto;
+  }
 `;
 
 const H1 = styled.h1`
   color: var(--color-yellow);
   font-size: 10rem;
   line-height: 10rem;
+  @media (max-width: 1570px) {
+    font-size: 8.5rem;
+    line-height: 8rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
 `;
 
 const H2 = styled.h2`
   color: #a89717c3;
   font-size: 3rem;
   margin: 20px 0;
+  @media (max-width: 1570px) {
+    margin: 15px 0;
+    font-size: 2.5rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
 `;
 
 const BorderPhoto = styled.div`
@@ -30,6 +62,13 @@ const BorderPhoto = styled.div`
   display: flex;
   align-items: start;
   margin-left: auto;
+  @media (max-width: 1570px) {
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  @media (max-width: 1145px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Photo = styled.img`
@@ -37,6 +76,12 @@ const Photo = styled.img`
   border: 20px solid var(--color-violet);
   border-bottom: 70px solid var(--color-violet);
   box-shadow: 20px 0px 0px 0px var(--color-yellow);
+  @media (max-width: 1570px) {
+    width: 420px;
+  }
+  @media (max-width: 1200px) {
+    width: 370px;
+  }
 `;
 
 const Before = styled.p`
