@@ -17,14 +17,16 @@ import Code4 from "../../img/codeEx/Screenshot 2023-07-19 214354.png";
 import Code5 from "../../img/codeEx/Screenshot 2023-07-20 155511.png";
 import Code6 from "../../img/codeEx/Screenshot 2023-07-25 122240.png";
 
+export type Arr = Array<{
+  text: string;
+  img: string;
+  program?: string;
+  href?: string;
+}>;
+
 type CardDataType = {
   title: string;
-  data: Array<{ text: string; img: string; href: string }>;
-};
-
-type CardDataType2 = {
-  title: string;
-  data: Array<{ text: string; img: string; program: string }>;
+  data: Arr;
 };
 
 const CardData: Array<CardDataType> = [
@@ -65,7 +67,7 @@ const CardData: Array<CardDataType> = [
   },
 ];
 
-const MyGraphic: Array<CardDataType2> = [
+const MyGraphic: Array<CardDataType> = [
   {
     title: "Графика и дизайн",
     data: [

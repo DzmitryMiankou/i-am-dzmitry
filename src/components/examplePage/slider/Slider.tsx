@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./Slick.scss";
 import "./SlickTheme.scss";
 import styled from "styled-components";
+import { Arr } from "../exampleData";
 
 interface Props<T> {
   $img: T;
@@ -15,10 +16,10 @@ const Figcaption = styled.figcaption`
 `;
 
 const Span = styled.span`
-  color: white;
+  color: var(--colour-white);
 `;
 
-const Icon = styled.span<Props<string>>`
+const Icon = styled.span<Props<string | undefined>>`
   width: 25px;
   height: 25px;
   background-image: url(${(props) => props.$img});
@@ -32,7 +33,7 @@ const Figure = styled.figure`
   flex-direction: column;
 `;
 
-const CenterMode = ({ data }: any) => {
+const CenterMode = ({ data }: { data: Arr }) => {
   const settings = {
     className: "slider variable-width",
     centerMode: true,
@@ -73,7 +74,7 @@ const CenterMode = ({ data }: any) => {
 
   return (
     <Slider {...settings}>
-      {data?.map(({ img, text, program }: any, id: number) => (
+      {data?.map(({ img, text, program }, id) => (
         <Figure key={id}>
           <img src={img} alt="images" />
           <Figcaption>
