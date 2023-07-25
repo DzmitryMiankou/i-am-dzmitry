@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/i-am-dzmitry/static/css/main.99bf0838.css",
-    "main.js": "/i-am-dzmitry/static/js/main.475dce35.js",
+    "main.css": "/i-am-dzmitry/static/css/main.9173eb2e.css",
+    "main.js": "/i-am-dzmitry/static/js/main.95602b3a.js",
     "static/js/787.e12319fe.chunk.js": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js",
     "static/media/Screenshot 2023-07-19 214354.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214354.4a6d4b77a1f5c929a15e.png",
     "static/media/Screenshot 2023-07-19 150254.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 150254.1455a54209d45fbd032c.png",
@@ -15,6 +15,7 @@
     "static/media/Screenshot 2023-07-19 143917.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 143917.d956697c17b864e2acda.png",
     "static/media/bear.jpg": "/i-am-dzmitry/static/media/bear.57a6e8ae0a5ac18aba3a.jpg",
     "static/media/Screenshot 2023-07-19 214117.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-19 214117.2a23a2eebc73438fa508.png",
+    "static/media/Screenshot 2023-07-25 122240.png": "/i-am-dzmitry/static/media/Screenshot 2023-07-25 122240.81735ed938d9419e8f4f.png",
     "static/media/3.jpg": "/i-am-dzmitry/static/media/3.534bdc68dbb456990be1.jpg",
     "static/media/07.jpg": "/i-am-dzmitry/static/media/07.90f4954fc8d49254292d.jpg",
     "static/media/foto_zhilichi.jpg": "/i-am-dzmitry/static/media/foto_zhilichi.f4aa191c7e1992daef5c.jpg",
@@ -32,12 +33,12 @@
     "static/media/Logo.svg": "/i-am-dzmitry/static/media/Logo.ab5ddf9976655482995ecb13a679b56f.svg",
     "index.html": "/i-am-dzmitry/index.html",
     "static/media/Arrow.svg": "/i-am-dzmitry/static/media/Arrow.4ed81c68234598e976a9e2d7b4d0ff3d.svg",
-    "main.99bf0838.css.map": "/i-am-dzmitry/static/css/main.99bf0838.css.map",
-    "main.475dce35.js.map": "/i-am-dzmitry/static/js/main.475dce35.js.map",
+    "main.9173eb2e.css.map": "/i-am-dzmitry/static/css/main.9173eb2e.css.map",
+    "main.95602b3a.js.map": "/i-am-dzmitry/static/js/main.95602b3a.js.map",
     "787.e12319fe.chunk.js.map": "/i-am-dzmitry/static/js/787.e12319fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99bf0838.css",
-    "static/js/main.475dce35.js"
+    "static/css/main.9173eb2e.css",
+    "static/js/main.95602b3a.js"
   ]
 }
