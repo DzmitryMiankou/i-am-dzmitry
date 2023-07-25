@@ -32,6 +32,7 @@ const Card = styled.a`
 
 const Photo = styled.img`
   width: 390px;
+  height: 200px;
   transition: 0.2s;
   @media (max-width: 425px) {
     width: 290px;

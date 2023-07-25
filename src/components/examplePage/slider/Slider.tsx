@@ -56,12 +56,16 @@ const CenterMode = ({ data }: any) => {
         breakpoint: 1180,
         settings: {
           slidesToShow: 2,
+          dots: true,
+          arrows: false,
         },
       },
       {
         breakpoint: 810,
         settings: {
           slidesToShow: 1,
+          dots: true,
+          arrows: false,
         },
       },
     ],

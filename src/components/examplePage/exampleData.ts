@@ -15,6 +15,7 @@ import Code2 from "../../img/codeEx/Screenshot 2023-07-19 214230.png";
 import Code3 from "../../img/codeEx/Screenshot 2023-07-19 214328.png";
 import Code4 from "../../img/codeEx/Screenshot 2023-07-19 214354.png";
 import Code5 from "../../img/codeEx/Screenshot 2023-07-20 155511.png";
+import Code6 from "../../img/codeEx/Screenshot 2023-07-25 122240.png";
 
 type CardDataType = {
   title: string;
@@ -54,6 +55,11 @@ const CardData: Array<CardDataType> = [
         text: "Currency Converter",
         img: Code5,
         href: "https://dzmitrymiankou.github.io/My-bank/",
+      },
+      {
+        text: "I-Explore (NodeJS, React. SPA code)",
+        img: Code6,
+        href: "https://github.com/DzmitryMiankou/explore/tree/main",
       },
     ],
   },

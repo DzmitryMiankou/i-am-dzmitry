@@ -19,7 +19,7 @@ const NameContainer = styled.div`
   width: 750px;
   @media (max-width: 1570px) {
     margin-left: auto;
-    width: 660px;
+    width: 550px;
   }
   @media (max-width: 1200px) {
     width: 550px;
@@ -35,12 +35,8 @@ const H1 = styled.h1`
   font-size: 10rem;
   line-height: 10rem;
   @media (max-width: 1570px) {
-    font-size: 8.5rem;
-    line-height: 8rem;
-  }
-  @media (max-width: 1200px) {
     font-size: 7rem;
-    line-height: 7rem;
+    line-height: 7.6rem;
   }
   @media (max-width: 1145px) {
     font-size: 6rem;
@@ -86,7 +82,7 @@ const BorderPhoto = styled.div`
   margin-left: auto;
   @media (max-width: 1570px) {
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   @media (max-width: 1145px) {
     margin-bottom: 20px;
@@ -99,7 +95,7 @@ const Photo = styled.img`
   border-bottom: 70px solid var(--color-violet);
   box-shadow: 20px 0px 0px 0px var(--color-yellow);
   @media (max-width: 1570px) {
-    width: 420px;
+    width: 400px;
   }
   @media (max-width: 1200px) {
     width: 370px;
